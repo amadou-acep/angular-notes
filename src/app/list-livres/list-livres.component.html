@@ -1,0 +1,52 @@
+<div class="card" *ngIf="listeCours.length>0">
+      
+      <div class="card-header"> 
+           <h1>{{titreOfficiel}}</h1>
+      </div>
+      <div class="row">
+            <div class="col-2">
+                  <button class="btn btn-primary"(click)="onClick()">{{!affichage ?'Afficher':'Cacher'}}</button>
+            </div>
+      </div>
+      <br>
+      <div class="row">
+            <div class="col-3">
+                  <select class="btn" [(ngModel)]='categoryId' (change)="changeCategory()">
+                        <option value='all'>
+                              Catégories
+                        </option>
+                        <option *ngFor="let category of listCategory" [value]="category">
+                              {{category}}
+                        </option>
+                  </select>
+            </div>
+      </div>
+      <div class="card-body">
+            <div class="table-responsive" *ngIf="affichage">
+                <table class="table">
+                       <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Titre</th>
+                                <th>Description</th>
+                                <th>Catégorie</th>
+                                <th>Prix</th>
+                                <th>Etoile</th>
+                            </tr>
+                       </thead>
+
+                       <tbody>
+                             <tr *ngFor="let cours of listeCours">
+                                <td><img [src]="cours.imageUrl" width="50px" [height]="" [width]=""></td> 
+                                <td [ngClass]="{'text-success':cours.titre2!='amadou'}">{{cours.titre2}}</td>
+                                 <td>{{ cours.description | deleteSpacePipe }}</td>   <!-- Create specific pipe -->
+                                 <td>{{ cours.category | uppercase }}</td>
+                                 <td>{{ cours.prix | currency : 'XOF':true}}</td>
+                                 <td><app-etoile [currentRate]='cours.etoile' (notify)="onNotify($event)"></app-etoile></td>
+                             </tr>
+                       </tbody>
+
+                </table>
+            </div>
+      </div>
+</div>

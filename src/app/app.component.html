@@ -1,2 +1,17 @@
-<app-course2></app-course2>
-<app-list-livres></app-list-livres>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Application</a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" [routerLink]="['/home']">Accueil</a>
+        <a class="nav-item nav-link" [routerLink]="['/livres']">Livres</a>
+        <a class="nav-item nav-link" href="#">Contact</a>
+       
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+        <br>
+        <router-outlet></router-outlet>
+  </div>

@@ -10,6 +10,9 @@ import { DeleteSpacePipePipe } from './delete-space-pipe.pipe';
 import { EtoileComponent } from './etoile/etoile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteEtoilePipe } from './delete-etoile.pipe';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DetailLivreComponent } from './detail-livre/detail-livre.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { DeleteEtoilePipe } from './delete-etoile.pipe';
     ListLivresComponent,
     DeleteSpacePipePipe,
     EtoileComponent,
-    DeleteEtoilePipe
+    DeleteEtoilePipe,
+    HomeComponent,
+    NotFoundComponent,
+    DetailLivreComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,7 @@ export class ListLivresComponent implements OnInit {
 
   listeCours=[ 
          {
+           id:1,
            titre2: "Test du titre",
            description: "c'est un test",
            category: "Lecture",
@@ -25,14 +26,24 @@ export class ListLivresComponent implements OnInit {
            etoile:4
          },
          {
+          id:2,
           titre2: "Test du titre2",
           description: "c'est un test2",
           category: "Lecture2",
           prix: 25002,
           imageUrl: "../../assets/img/callcenter.jpg",
           etoile:3
+        },
+        {
+          id:3,
+          titre2: "Test du livre 3",
+          description: "c'est un test2",
+          category: "Lecture2",
+          prix: 3502,
+          imageUrl: "../../assets/img/callcenter.jpg",
+          etoile:2
         }
-        ]
+      ]
 
   // tab1 = {
   //   data1: "amadou",

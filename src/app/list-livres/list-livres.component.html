@@ -32,6 +32,7 @@
                                 <th>Catégorie</th>
                                 <th>Prix</th>
                                 <th>Etoile</th>
+                                <th></th>
                             </tr>
                        </thead>
 
@@ -43,6 +44,7 @@
                                  <td>{{ cours.category | uppercase }}</td>
                                  <td>{{ cours.prix | currency : 'XOF':true}}</td>
                                  <td><app-etoile [currentRate]='cours.etoile' (notify)="onNotify($event)"></app-etoile></td>
+                                 <td><a class="btn btn-primary" [routerLink]="['/livres/',cours.id]">Voir détail</a></td>
                              </tr>
                        </tbody>
 
